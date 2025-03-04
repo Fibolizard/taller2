@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a Mi Página Web</h1>
+    </header>
+    <main>
+        <section id="formulario">
+            <h2>Formulario de Contacto</h2>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+        <section id="carrusel">
+            <h2>Carrusel de Imágenes</h2>
+            <div class="carousel">
+                <div class="carousel-item active"><img src="imagen1.jpg" alt="Imagen 1"></div>
+                <div class="carousel-item"><img src="imagen2.jpg" alt="Imagen 2"></div>
+                <div class="carousel-item"><img src="imagen3.jpg" alt="Imagen 3"></div>
+            </div>
+            <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+            <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+        </section>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>

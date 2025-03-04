@@ -1,0 +1,34 @@
+/* Estilos globales para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif; /* Fuente utilizada en toda la página */
+    margin: 0;    /* Elimina márgenes por defecto */
+    padding: 0;   /* Elimina rellenos por defecto */
+  
+  }
+  
+  /* Estilos para el encabezado */
+  header {
+    background-color: #333; /* Fondo oscuro */
+    color: #fff;            /* Texto en blanco */
+    padding: 20px;          /* Espacio interno */
+    text-align: center;     /* Centrado del contenido */
+  }
+  
+  /* Estilos para el menú de navegación */
+  nav ul {
+    list-style: none;       /* Elimina las viñetas de la lista */
+    margin: 0;              /* Elimina márgenes */
+    padding: 0;             /* Elimina rellenos */
+    display: flex;          /* Usa flexbox para alinear elementos */
+    justify-content: center;/* Centra los elementos horizontalmente */
+  }
+  
+  nav li {
+    margin: 0 10px;         /* Espacio horizontal entre cada elemento de la lista */
+  }
+  
+  nav a {
+    color: #fff;            /* Enlaces en color blanco */
+    text-decoration: none;  /* Sin subrayado */
+  }
+  
