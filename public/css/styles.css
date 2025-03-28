@@ -1,0 +1,61 @@
+/* Estilos CSS Base - Los alumnos deben completar este archivo */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f0f0f0;
+    /* Un color gris claro base - Cambiar por
+    los alumnos */
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    /* Para maquetación flexible - Los alumnos pueden
+    experimentar con grid también */
+
+    flex-wrap: wrap;
+    /* Para que los productos se envuelvan en pantallas
+    pequeñas */
+    justify-content: center;
+    /* Centrar los productos horizontalmente */
+    padding: 20px;
+}
+
+.producto {
+    border: 1px solid #ccc;
+    /* Borde básico para cada producto - Estilizar
+    por los alumnos */
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    width: 250px;
+    /* Ancho base para cada producto - Adaptar para
+    responsive */
+}
+
+.producto img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* TODO: Agregar estilos responsive aquí (media queries) para diferentes
+    tamaños de pantalla */
+
+footer {
+    background-color: #f0f0f0;
+    /* Color base para el footer - Personalizar
+    por alumnos */
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    /* Footer fijo en la parte inferior - Opcional, los
+    alumnos pueden cambiar */
+    bottom: 0;
+    width: 100%;
+}

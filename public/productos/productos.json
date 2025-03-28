@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "nombre": "Producto A",
+        "descripcion": "Descripción del Producto A. Este es un producto de ejemplo.",
+        "imagen": "producto-a.jpg",
+        "precio": 25.99
+    },
+    {
+        "id": 2,
+        "nombre": "Producto B",
+        "descripcion": "Descripción del Producto B. Otro producto para mostrar.",
+        "imagen": "producto-b.jpg",
+        "precio": 49.50
+    },
+    {
+        "id": 3,
+        "nombre": "Producto C",
+        "descripcion": "Descripción del Producto C. Un tercer producto en el catálogo.",
+        "imagen": "producto-c.jpg",
+        "precio": 15.75
+    }
+]
