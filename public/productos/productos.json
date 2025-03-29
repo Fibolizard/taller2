@@ -1,23 +1,42 @@
 [
     {
         "id": 1,
-        "nombre": "Producto A",
-        "descripcion": "Descripción del Producto A. Este es un producto de ejemplo.",
-        "imagen": "producto-a.jpg",
-        "precio": 25.99
+        "nombre": "Juego A",
+        "descripcion": "Un emocionante juego de acción con mucha adrenalina.",
+        "imagen": "../img/producto-a.png",
+        "precio": 25.99,
+        "categoria": "Acción"
     },
     {
         "id": 2,
-        "nombre": "Producto B",
-        "descripcion": "Descripción del Producto B. Otro producto para mostrar.",
-        "imagen": "producto-b.jpg",
-        "precio": 49.50
+        "nombre": "Juego B",
+        "descripcion": "Una aventura épica que te llevará a mundos increíbles.",
+        "imagen": "producto-b.png",
+        "precio": 49.50,
+        "categoria": "Aventura"
     },
     {
         "id": 3,
-        "nombre": "Producto C",
-        "descripcion": "Descripción del Producto C. Un tercer producto en el catálogo.",
+        "nombre": "Juego C",
+        "descripcion": "Un RPG con una historia profunda y personajes inolvidables.",
         "imagen": "producto-c.jpg",
-        "precio": 15.75
+        "precio": 15.75,
+        "categoria": "RPG"
+    },
+    {
+        "id": 4,
+        "nombre": "Juego D",
+        "descripcion": "Un juego de estrategia que pondrá a prueba tu mente.",
+        "imagen": "producto-D.jpg",
+        "precio": 35.00,
+        "categoria": "Estrategia"
+    },
+    {
+        "id": 5,
+        "nombre": "Juego E",
+        "descripcion": "Una mezcla perfecta entre acción y aventura.",
+        "imagen": "producto-e.png",
+        "precio": 45.00,
+        "categoria": "Acción"
     }
 ]

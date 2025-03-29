@@ -1,25 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-
-scale=1.0">
-
-<title>Catálogo de Productos</title>
-<link rel="stylesheet" href="./css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Videojuegos</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-<header>
-<h1>Catálogo de Productos</h1>
-</header>
-<main id="contenedor-productos">
-<!-- Aquí se insertarán los productos dinámicamente con JavaScript
--->
-</main>
-<footer>
-<p>© 2024 Mi Catálogo de Productos</p>
-</footer>
-<script src="./js/script.js"></script>
+  <header>
+    <h1>Catálogo de Videojuegos</h1>
+    <div class="filter-container">
+      <input type="text" id="search-input" placeholder="Buscar videojuegos..." class="form-control" />
+      <select id="category-select" class="form-control">
+        <option value="">Todas las Categorías</option>
+        <option value="Acción">Acción</option>
+        <option value="Aventura">Aventura</option>
+        <option value="RPG">RPG</option>
+        <option value="Estrategia">Estrategia</option>
+      </select>
+    </div>
+  </header>
+
+  <!-- Carrusel de juegos populares -->
+  <div id="carousel" class="carousel">
+    <div class="carousel-inner">
+        <!-- Los items del carrusel se generarán dinámicamente -->
+      </div>
+      <button id="prev-btn" class="carousel-btn">&lt;</button>
+      <button id="next-btn" class="carousel-btn">&gt;</button>
+    <div class="carousel-inner">
+      <!-- Los items del carrusel se generarán dinámicamente -->
+    </div>
+  </div>
+
+  <main id="contenedor-productos">
+    <!-- Aquí se insertarán los productos dinámicamente con JavaScript -->
+  </main>
+  <footer>
+    <p>© 2024 Mi Catálogo de Videojuegos</p>
+  </footer>
+  <script src="./js/script.js"></script>
 </body>
 </html>

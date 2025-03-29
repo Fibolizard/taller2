@@ -1,4 +1,4 @@
-/* Estilos CSS Base - Los alumnos deben completar este archivo */
+/* Estilos CSS Base */
 body {
     font-family: sans-serif;
     margin: 0;
@@ -6,56 +6,147 @@ body {
 }
 
 header {
-    background-color: #f0f0f0;
-    /* Un color gris claro base - Cambiar por
-    los alumnos */
+    background-color: #e93535;
     padding: 20px;
     text-align: center;
+    color: #fff;
 }
 
-main {
+.filter-container {
+    margin-top: 15px;
     display: flex;
-    /* Para maquetación flexible - Los alumnos pueden
-    experimentar con grid también */
-
-    flex-wrap: wrap;
-    /* Para que los productos se envuelvan en pantallas
-    pequeñas */
     justify-content: center;
-    /* Centrar los productos horizontalmente */
+    gap: 10px;
+}
+
+.filter-container input,
+.filter-container select {
+    max-width: 300px;
+}
+/* Carrusel */
+.carousel {
+    width: 50%;
+    max-width: 220px;
+    margin: 20px auto; /* Centrado y con márgenes */
+    height: 300px; /* Altura reducida */
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .carousel-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease; /* Transición suave */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .carousel-item.active {
+    opacity: 1;
+  }
+  
+  /* Estilos para los botones del carrusel */
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255,255,255,0.7);
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    color: #333;
+    z-index: 2;
+  }
+  
+  #prev-btn {
+    left: 10px;
+  }
+  
+  #next-btn {
+    right: 10px;
+  }
+  
+  .carousel-btn:hover {
+    background-color: rgba(255,255,255,0.9);
+  }
+  
+  /* Productos: Se mantiene la modificación anterior para tamaño */
+  .producto img {
+      width: 150px;
+      height: auto;
+      margin-bottom: 10px;
+      object-fit: cover;
+  }
+  
+
+/* Layout con grid: 6 columnas para los productos */
+main {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
     padding: 20px;
+    justify-items: center;
 }
 
 .producto {
     border: 1px solid #ccc;
-    /* Borde básico para cada producto - Estilizar
-    por los alumnos */
-    margin: 10px;
-    padding: 15px;
+    margin: 0;  /* El gap del grid se encarga del espacio */
+    padding: 10px;
     text-align: center;
-    width: 250px;
-    /* Ancho base para cada producto - Adaptar para
-    responsive */
+    width: 100%; /* Se adapta al ancho de la celda */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.producto:hover {
+    transform: scale(1.05);
 }
 
 .producto img {
-    max-width: 100%;
-    height: auto;
+    width: 150px;   /* Ajusta a tu gusto */
+    height: auto;   /* Mantiene proporciones */
     margin-bottom: 10px;
+    object-fit: cover; /* Ajusta la forma de encuadre si fuera necesario */
 }
 
-/* TODO: Agregar estilos responsive aquí (media queries) para diferentes
-    tamaños de pantalla */
+
+.categoria {
+    font-style: italic;
+    color: #666;
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+    main {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .filter-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
 
 footer {
     background-color: #f0f0f0;
-    /* Color base para el footer - Personalizar
-    por alumnos */
     padding: 10px;
     text-align: center;
     position: fixed;
-    /* Footer fijo en la parte inferior - Opcional, los
-    alumnos pueden cambiar */
     bottom: 0;
     width: 100%;
 }
