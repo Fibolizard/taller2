@@ -26,9 +26,9 @@ header {
 /* Carrusel */
 .carousel {
     width: 50%;
-    max-width: 220px;
+    max-width: 205px;
     margin: 20px auto; /* Centrado y con márgenes */
-    height: 300px; /* Altura reducida */
+    height: 295px; /* Altura reducida */
     overflow: hidden;
     position: relative;
     border: 1px solid #ccc;
@@ -149,4 +149,190 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+/* --- ESTILOS PARA AUTENTICACIÓN --- */
+
+/* Contenedor principal para formularios de login/registro */
+.auth-container {
+  max-width: 450px; /* Ancho máximo del formulario */
+  margin: 40px auto; /* Centrar horizontalmente y dar espacio vertical */
+  padding: 30px;
+  background-color: #f8f8f8; /* Un fondo ligero */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.auth-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+/* Estilos para grupos de formulario (label + input) */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block; /* Asegura que la etiqueta esté en su propia línea */
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Estilos básicos para inputs (puedes tenerlos definidos ya) */
+.form-control {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+}
+
+.form-control:focus {
+  border-color: #007bff; /* O tu color primario */
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); /* Resplandor al enfocar */
+}
+
+/* Estilos básicos para botones (puedes tenerlos definidos ya) */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none; /* Para enlaces estilizados como botones */
+  transition: background-color 0.2s ease;
+}
+
+.btn-block {
+  width: 100%; /* Botón que ocupa todo el ancho */
+}
+
+.btn-primary {
+  background-color: #007bff; /* Azul primario */
+  color: white;
+}
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-success {
+  background-color: #28a745; /* Verde éxito */
+  color: white;
+}
+.btn-success:hover {
+  background-color: #1e7e34;
+}
+
+.btn-danger {
+  background-color: #dc3545; /* Rojo peligro (para logout) */
+  color: white;
+}
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+.btn-sm { /* Botón pequeño para el header */
+  padding: 5px 10px;
+  font-size: 0.875rem;
+}
+
+
+/* Área para mostrar mensajes de error/éxito */
+.message-area {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.error-message {
+  color: #721c24; /* Texto oscuro para errores */
+  background-color: #f8d7da; /* Fondo rojo claro */
+  border: 1px solid #f5c6cb; /* Borde rojo */
+}
+
+.success-message {
+  color: #155724; /* Texto oscuro para éxito */
+  background-color: #d4edda; /* Fondo verde claro */
+  border: 1px solid #c3e6cb; /* Borde verde */
+}
+
+
+/* --- ESTILOS PARA EL ESTADO DEL USUARIO EN EL HEADER (index.html) --- */
+
+/* Contenedor en el header para alinear estado y filtros */
+.header-controls {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos bajen si no caben */
+  justify-content: space-between; /* Espacio entre estado de user y filtros */
+  align-items: center;
+  padding: 10px 0; /* Espaciado vertical */
+  gap: 15px; /* Espacio entre elementos si se envuelven */
+}
+
+/* Contenedor específico del estado del usuario */
+#user-status-container {
+  display: flex; /* Alinear elementos internos (bienvenida, botón) */
+  align-items: center;
+  gap: 10px; /* Espacio entre el saludo y el botón logout, o entre login/register */
+}
+
+#user-status-container span { /* Estilo para el mensaje "Bienvenido..." */
+  font-weight: bold;
+  color: #444; /* O el color que prefieras */
+}
+
+/* Ajustes opcionales para los filtros si es necesario */
+.filter-container {
+  display: flex;
+  gap: 10px;
+}
+
+/* Navegación principal (si la usas en login/register) */
+.main-nav {
+  background-color: #333; /* Fondo oscuro para la barra de nav */
+  padding: 10px 20px;
+  text-align: center; /* Centrar enlaces */
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 8px 15px;
+  margin: 0 5px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.nav-link:hover {
+  background-color: #555; /* Resaltar al pasar el mouse */
+}
+
+
+/* --- MEDIA QUERIES (Opcional, para mejorar responsividad) --- */
+@media (max-width: 768px) {
+  .header-controls {
+      flex-direction: column; /* Apilar controles verticalmente */
+      align-items: stretch; /* Estirar elementos al ancho completo */
+  }
+   .filter-container {
+      flex-direction: column; /* Apilar filtros verticalmente */
+       width: 100%; /* Ocupar ancho */
+  }
+   .filter-container input,
+   .filter-container select {
+       width: 100%; /* Asegurar que ocupen todo el ancho */
+   }
+   #user-status-container {
+       justify-content: center; /* Centrar botones/texto de usuario */
+       margin-bottom: 10px; /* Espacio debajo del estado de usuario */
+   }
 }
