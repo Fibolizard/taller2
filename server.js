@@ -3,12 +3,12 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
-const crypto = require('crypto'); 
+const crypto = require('crypto');
 
 const app = express();
 const port = 3000;
 const usersFilePath = path.join(__dirname, 'users.json');
-const sessionsFilePath = path.join(__dirname, 'sessions.json'); 
+const sessionsFilePath = path.join(__dirname, 'sessions.json');
 
 
 app.use(express.static('public'));
@@ -40,7 +40,7 @@ const writeSessions = (sessions) => {
     }
 };
 
-let activeSessions = readSessions(); 
+let activeSessions = readSessions();
 
 
 const readUsers = () => {
@@ -50,7 +50,7 @@ const readUsers = () => {
             return [];
         }
         const usersData = fs.readFileSync(usersFilePath);
-        
+
         return usersData.length > 0 ? JSON.parse(usersData) : [];
     } catch (error) {
         console.error("Error leyendo users.json:", error);
@@ -69,9 +69,9 @@ const writeUsers = (users) => {
 
 
 const hashPassword = (password) => {
-    const salt = crypto.randomBytes(16).toString('hex'); 
-    
-    
+    const salt = crypto.randomBytes(16).toString('hex');
+
+
     const hash = crypto.pbkdf2Sync(password, salt, 10000, 64, 'sha512').toString('hex');
     return { salt, hash };
 };
@@ -79,12 +79,12 @@ const hashPassword = (password) => {
 
 const verifyPassword = (storedHash, storedSalt, providedPassword) => {
     const hashToCompare = crypto.pbkdf2Sync(providedPassword, storedSalt, 10000, 64, 'sha512').toString('hex');
-    
+
     try {
         return crypto.timingSafeEqual(Buffer.from(storedHash, 'hex'), Buffer.from(hashToCompare, 'hex'));
     } catch (error) {
-         
-         return false;
+
+        return false;
     }
 };
 
@@ -131,12 +131,12 @@ app.post('/api/register', (req, res) => {
         return res.status(409).json({ message: 'El nombre de usuario ya existe.' });
     }
 
-    const { salt, hash } = hashPassword(password); 
+    const { salt, hash } = hashPassword(password);
     const newUser = {
         id: Date.now().toString(),
         username: username,
-        salt: salt, 
-        passwordHash: hash 
+        salt: salt,
+        passwordHash: hash
     };
 
     users.push(newUser);
@@ -155,29 +155,29 @@ app.post('/api/login', (req, res) => {
     const users = readUsers();
     const user = users.find(u => u.username === username);
 
-    if (!user || !user.salt || !user.passwordHash) { 
+    if (!user || !user.salt || !user.passwordHash) {
         return res.status(401).json({ message: 'Credenciales inválidas.' });
     }
 
-    const isValid = verifyPassword(user.passwordHash, user.salt, password); 
+    const isValid = verifyPassword(user.passwordHash, user.salt, password);
 
     if (isValid) {
-        
-        const token = crypto.randomBytes(32).toString('hex');
-        const expires = Date.now() + (1 * 60 * 60 * 1000); 
 
-        
+        const token = crypto.randomBytes(32).toString('hex');
+        const expires = Date.now() + (1 * 60 * 60 * 1000);
+
+
         activeSessions[token] = {
             userId: user.id,
             username: user.username,
             expires: expires
         };
-        writeSessions(activeSessions); 
+        writeSessions(activeSessions);
 
-        console.log(`Usuario inició sesión (con crypto): ${username}, Token: ${token.substring(0,8)}...`);
+        console.log(`Usuario inició sesión (con crypto): ${username}, Token: ${token.substring(0, 8)}...`);
 
-        
-        res.setHeader('Set-Cookie', `sessionToken=${token}; HttpOnly; Path=/; Max-Age=3600; SameSite=Strict`); 
+
+        res.setHeader('Set-Cookie', `sessionToken=${token}; HttpOnly; Path=/; Max-Age=3600; SameSite=Strict`);
         res.status(200).json({ message: 'Inicio de sesión exitoso.', user: { id: user.id, username: user.username } });
 
     } else {
@@ -187,15 +187,15 @@ app.post('/api/login', (req, res) => {
 
 
 app.post('/api/logout', (req, res) => {
-    const cookies = parseCookies(req.headers.cookie); 
+    const cookies = parseCookies(req.headers.cookie);
     const token = cookies.sessionToken;
 
     if (token && activeSessions[token]) {
         const username = activeSessions[token].username;
-        delete activeSessions[token]; 
-        writeSessions(activeSessions); 
+        delete activeSessions[token];
+        writeSessions(activeSessions);
         console.log(`Usuario cerró sesión (con crypto): ${username}`);
-        
+
         res.setHeader('Set-Cookie', `sessionToken=; HttpOnly; Path=/; Max-Age=0; SameSite=Strict`);
         res.status(200).json({ message: 'Sesión cerrada con éxito.' });
     } else {
@@ -209,21 +209,21 @@ app.get('/api/session', (req, res) => {
     const token = cookies.sessionToken;
     const session = activeSessions[token];
 
-    
+
     if (session && session.expires > Date.now()) {
-         
-         session.expires = Date.now() + (1 * 60 * 60 * 1000); 
-         activeSessions[token] = session; 
-         writeSessions(activeSessions);
-         res.setHeader('Set-Cookie', `sessionToken=${token}; HttpOnly; Path=/; Max-Age=3600; SameSite=Strict`);
-        
+
+        session.expires = Date.now() + (1 * 60 * 60 * 1000);
+        activeSessions[token] = session;
+        writeSessions(activeSessions);
+        res.setHeader('Set-Cookie', `sessionToken=${token}; HttpOnly; Path=/; Max-Age=3600; SameSite=Strict`);
+
         res.status(200).json({ loggedIn: true, user: { id: session.userId, username: session.username } });
     } else {
-        
+
         if (session) {
-             delete activeSessions[token];
-             writeSessions(activeSessions);
-             res.setHeader('Set-Cookie', `sessionToken=; HttpOnly; Path=/; Max-Age=0; SameSite=Strict`); 
+            delete activeSessions[token];
+            writeSessions(activeSessions);
+            res.setHeader('Set-Cookie', `sessionToken=; HttpOnly; Path=/; Max-Age=0; SameSite=Strict`);
         }
         res.status(200).json({ loggedIn: false });
     }
@@ -234,7 +234,7 @@ app.listen(port, () => {
     console.log(`Servidor (modo inseguro - sin librerías extra) escuchando en http://localhost:${port}`);
     console.log(`Archivo de usuarios esperado en: ${usersFilePath}`);
     console.log(`Archivo de sesiones esperado en: ${sessionsFilePath}`);
-    
+
     readUsers();
     readSessions();
 });

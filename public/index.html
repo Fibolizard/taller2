@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/styles.css">
 </head>
+
 <body>
   <header>
     <div class="content flex-fill">
@@ -20,44 +22,44 @@
           <a href="#"></a>
         </nav>
       </div>
-    
+
       <div class="header-controls">
-  
-          <div id="user-status-container">
-              </div>
+
+        <div id="user-status-container">
+        </div>
       </div>
-    <div class="filter-container">
-      <input type="text" id="search-input" placeholder="Buscar videojuegos..." class="form-control" />
-      <select id="category-select" class="form-control">
-        <option value="">Todas las Categorías</option>
-        <option value="Acción">Acción</option>
-        <option value="Aventura">Aventura</option>
-        <option value="RPG">RPG</option>
-        <option value="Estrategia">Estrategia</option>
-      </select>
-    </div>
+      <div class="filter-container">
+        <input type="text" id="search-input" placeholder="Buscar videojuegos..." class="form-control" />
+        <select id="category-select" class="form-control">
+          <option value="">Todas las Categorías</option>
+          <option value="Acción">Acción</option>
+          <option value="Aventura">Aventura</option>
+          <option value="RPG">RPG</option>
+          <option value="Estrategia">Estrategia</option>
+        </select>
+      </div>
   </header>
 
   <!-- Carrusel de juegos populares -->
   <div id="carousel" class="carousel">
     <div class="carousel-inner">
-        <!-- Los items del carrusel se generarán dinámicamente -->
-      </div>
-      <button id="prev-btn" class="carousel-btn">&lt;</button>
-      <button id="next-btn" class="carousel-btn">&gt;</button>
+      <!-- Los items del carrusel se generarán dinámicamente -->
+    </div>
+    <button id="prev-btn" class="carousel-btn">&lt;</button>
+    <button id="next-btn" class="carousel-btn">&gt;</button>
     <div class="carousel-inner">
       <!-- Los items del carrusel se generarán dinámicamente -->
     </div>
   </div>
-<!-- Sección de Servicios -->
-<div class="servicios-container">
-  <h2>Alcanza <strong>las mejores ofertas</strong> de la industria</h2>
-  <h3>Usa nuestros servicios y ahorra en videojuegos</h3>
-  <p>
-    Nuestro objetivo es ofrecerte los mejores precios en videojuegos, 
-    con ofertas extremadamente competitivas en la industria.
-  </p>
-</div>
+  <!-- Sección de Servicios -->
+  <div class="servicios-container">
+    <h2>Alcanza <strong>las mejores ofertas</strong> de la industria</h2>
+    <h3>Usa nuestros servicios y ahorra en videojuegos</h3>
+    <p>
+      Nuestro objetivo es ofrecerte los mejores precios en videojuegos,
+      con ofertas extremadamente competitivas en la industria.
+    </p>
+  </div>
   <main id="contenedor-productos">
     <!-- Aquí se insertarán los productos dinámicamente con JavaScript -->
   </main>
@@ -65,18 +67,19 @@
     <p>© 2025 Mi Catálogo de Videojuegos</p>
   </footer>
   <!-- Modal para mostrar detalles del producto -->
-<div id="product-modal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2 id="modal-title"></h2>
-    <img id="modal-image" src="" alt="Imagen del producto" />
-    <p id="modal-description"></p>
-    <p id="modal-price"></p>
-    <button id="add-to-cart" class="btn btn-primary">Añadir al carrito</button>
+  <div id="product-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modal-title"></h2>
+      <img id="modal-image" src="" alt="Imagen del producto" />
+      <p id="modal-description"></p>
+      <p id="modal-price"></p>
+      <button id="add-to-cart" class="btn btn-primary">Añadir al carrito</button>
+    </div>
   </div>
-</div>
 
   <script src="./js/script.js"></script>
   <script src="./js/modal.js"></script>
 </body>
+
 </html>

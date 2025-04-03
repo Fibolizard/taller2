@@ -20,14 +20,14 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    
+
     contenedorProductos.addEventListener('click', (event) => {
         let productElement = event.target.closest('.producto');
-        if (!productElement) return; 
+        if (!productElement) return;
 
         console.log("Producto clickeado:", productElement);
 
-        
+
         const nombre = productElement.querySelector('h3')?.textContent || "Producto sin nombre";
         const imagenSrc = productElement.querySelector('img')?.src || "";
         const descripcion = productElement.querySelector('p')?.textContent || "Sin descripción";
@@ -41,18 +41,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
         modal.style.display = 'block';
 
-        
+
         addToCartBtn.onclick = () => {
             alert(`Se añadió "${nombre}" al carrito.`);
         };
     });
 
-    
+
     modalClose.onclick = () => {
         modal.style.display = 'none';
     };
 
-    
+
     window.onclick = (event) => {
         if (event.target === modal) {
             modal.style.display = 'none';
