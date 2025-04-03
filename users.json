@@ -4,5 +4,11 @@
     "username": "hola",
     "salt": "438bb6c837cff909319bd848f65778e2",
     "passwordHash": "e0b5db6251500061ccd5521092dc4ca9ce5deee36f0a5fe157d8658b30b3dcabb01bf2be7266187423de6b84e9c5b5510e046d85f8dba977c9e140c8870d0e36"
+  },
+  {
+    "id": "1743650922593",
+    "username": "probando",
+    "salt": "3eaa1fe7553b1de46245f8945da89833",
+    "passwordHash": "4fa75ed1ef1a38093f8b2459e3a2d7871f8db2d88865518c12e11f8e28e85c63cff3c9201c550374717a1d889dabe5a6f03d604eb8f03ac4a130788aafd8b91c"
   }
 ]

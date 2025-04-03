@@ -3,13 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Catálogo de Videojuegos</title>
+  <title>GameDeals</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
   <header>
-    <h1>Catálogo de Videojuegos</h1>
+    <div class="content flex-fill">
+      <div class="header d-flex justify-content-between align-items-center">
+        <div id="logoCenter">
+          <a href="#" class="logo">
+            <img src="img/logo.png" alt="GameDeals Logo" width="300px" class="center">
+          </a>
+        </div>
+        <nav>
+          <a href="#"></a>
+        </nav>
+      </div>
     
       <div class="header-controls">
   
@@ -39,13 +49,45 @@
       <!-- Los items del carrusel se generarán dinámicamente -->
     </div>
   </div>
- <h1>Encuentra los mejores</h1>
+  <div id="servicios">
+    <span style="font-size: 46px; color: #000000;">
+      Alcanza <strong>las mejores ofertas<br></strong> de la industria <br><strong>usando nuestros servicios</strong>
+    </span>
+    <span style="font-size: 46px; color: #000000;"></span>
+    <p style="font-size: 25px; font-family: JetBrains Mono;">
+    <br>Nuestro objetivo es ofrecerte los mejores precios en videojuegos<br>
+    con ofertas extremadamente competitivas en la industria
+    </p>
+    <br>
+    <p style="font-size:  25px; font-family: Jetbrains Mono;">
+    GameDeals pretende poder darte acceso a un catalogo extenso de videojuegos, donde podrás recibir la mejor calidad <br> al mejor precio.
+    ¿A qué esperas para unirte?
+    </p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  </div>
   <main id="contenedor-productos">
     <!-- Aquí se insertarán los productos dinámicamente con JavaScript -->
   </main>
   <footer>
     <p>© 2024 Mi Catálogo de Videojuegos</p>
   </footer>
+  <!-- Modal para mostrar detalles del producto -->
+<div id="product-modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 id="modal-title"></h2>
+    <img id="modal-image" src="" alt="Imagen del producto" />
+    <p id="modal-description"></p>
+    <p id="modal-price"></p>
+    <button id="add-to-cart" class="btn btn-primary">Añadir al carrito</button>
+  </div>
+</div>
+
   <script src="./js/script.js"></script>
+  <script src="./js/modal.js"></script>
 </body>
 </html>

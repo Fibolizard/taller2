@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "nombre": "Juego A",
+        "nombre": "Armored Core VI",
         "descripcion": "Un emocionante juego de acción con mucha adrenalina.",
         "imagen": "../img/producto-a.png",
         "precio": 25.99,
@@ -9,7 +9,7 @@
     },
     {
         "id": 2,
-        "nombre": "Juego B",
+        "nombre": "Marvel: Spider Man 2",
         "descripcion": "Una aventura épica que te llevará a mundos increíbles.",
         "imagen": "producto-b.png",
         "precio": 49.50,
@@ -17,7 +17,7 @@
     },
     {
         "id": 3,
-        "nombre": "Juego C",
+        "nombre": "Rain World: The Watcher",
         "descripcion": "Un RPG con una historia profunda y personajes inolvidables.",
         "imagen": "producto-c.jpg",
         "precio": 15.75,
@@ -25,7 +25,7 @@
     },
     {
         "id": 4,
-        "nombre": "Juego D",
+        "nombre": "Rise of the Ronin",
         "descripcion": "Un juego de estrategia que pondrá a prueba tu mente.",
         "imagen": "producto-D.jpg",
         "precio": 35.00,
@@ -33,7 +33,23 @@
     },
     {
         "id": 5,
-        "nombre": "Juego E",
+        "nombre": "CONTROL",
+        "descripcion": "Una mezcla perfecta entre acción y aventura.",
+        "imagen": "producto-e.png",
+        "precio": 45.00,
+        "categoria": "Acción"
+    },
+    {
+        "id": 6,
+        "nombre": "CONTROL",
+        "descripcion": "Una mezcla perfecta entre acción y aventura.",
+        "imagen": "producto-e.png",
+        "precio": 45.00,
+        "categoria": "Acción"
+    },
+    {
+        "id": 7,
+        "nombre": "CONTROL",
         "descripcion": "Una mezcla perfecta entre acción y aventura.",
         "imagen": "producto-e.png",
         "precio": 45.00,
