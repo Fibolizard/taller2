@@ -1,4 +1,4 @@
-/* Estilos CSS Base */
+
 body {
     font-family: sans-serif;
     margin: 0;
@@ -23,12 +23,12 @@ header {
 .filter-container select {
     max-width: 300px;
 }
-/* Carrusel */
+
 .carousel {
     width: 50%;
     max-width: 205px;
-    margin: 20px auto; /* Centrado y con márgenes */
-    height: 295px; /* Altura reducida */
+    margin: 20px auto;
+    height: 295px;
     overflow: hidden;
     position: relative;
     border: 1px solid #ccc;
@@ -48,7 +48,7 @@ header {
     width: 100%;
     height: 100%;
     opacity: 0;
-    transition: opacity 1s ease; /* Transición suave */
+    transition: opacity 1s ease;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,7 +58,7 @@ header {
     opacity: 1;
   }
   
-  /* Estilos para los botones del carrusel */
+ 
   .carousel-btn {
     position: absolute;
     top: 50%;
@@ -85,7 +85,7 @@ header {
     background-color: rgba(255,255,255,0.9);
   }
   
-  /* Productos: Se mantiene la modificación anterior para tamaño */
+ 
   .producto img {
       width: 150px;
       height: auto;
@@ -94,7 +94,7 @@ header {
   }
   
 
-/* Layout con grid: 6 columnas para los productos */
+
 main {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -105,10 +105,10 @@ main {
 
 .producto {
     border: 1px solid #ccc;
-    margin: 0;  /* El gap del grid se encarga del espacio */
+    margin: 0; 
     padding: 10px;
     text-align: center;
-    width: 100%; /* Se adapta al ancho de la celda */
+    width: 100%;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border-radius: 5px;
     transition: transform 0.3s;
@@ -119,10 +119,10 @@ main {
 }
 
 .producto img {
-    width: 150px;   /* Ajusta a tu gusto */
-    height: auto;   /* Mantiene proporciones */
+    width: 150px;  
+    height: auto;  
     margin-bottom: 10px;
-    object-fit: cover; /* Ajusta la forma de encuadre si fuera necesario */
+    object-fit: cover;
 }
 
 
@@ -131,7 +131,7 @@ main {
     color: #666;
 }
 
-/* Estilos responsive */
+
 @media (max-width: 768px) {
     main {
       grid-template-columns: repeat(2, 1fr);
@@ -150,14 +150,14 @@ footer {
     bottom: 0;
     width: 100%;
 }
-/* --- ESTILOS PARA AUTENTICACIÓN --- */
 
-/* Contenedor principal para formularios de login/registro */
+
+
 .auth-container {
-  max-width: 700px; /* Ancho máximo del formulario */
-  margin: 40px auto; /* Centrar horizontalmente y dar espacio vertical */
+  max-width: 700px;
+  margin: 40px auto;
   padding: 30px;
-  background-color: #f8f8f8; /* Un fondo ligero */
+  background-color: #f8f8f8;
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -171,39 +171,39 @@ footer {
 }
 
 
-/* Estilos para grupos de formulario (label + input) */
+
 .form-group {
   display: flex;
-    flex-direction: column;  /* Alinea los elementos verticalmente */
-    align-items: flex-start;  /* Alinea el label a la izquierda */
+    flex-direction: column; 
+    align-items: flex-start; 
     width: 100%;
     margin-bottom: 20px;
 }
 
 .form-group label {
-  display: block; /* Asegura que la etiqueta esté en su propia línea */
+  display: block;
   margin-bottom: 8px;
   font-weight: bold;
   color: #555;
 }
 
-/* Estilos básicos para inputs (puedes tenerlos definidos ya) */
+
 .form-control {
   width: 100%;
   padding: 10px 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1rem;
-  box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+  box-sizing: border-box;
 }
 
 .form-control:focus {
-  border-color: #007bff; /* O tu color primario */
+  border-color: #007bff;
   outline: none;
-  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); /* Resplandor al enfocar */
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
 }
 
-/* Estilos básicos para botones (puedes tenerlos definidos ya) */
+
 .btn {
   display: inline-block;
   padding: 10px 20px;
@@ -212,16 +212,16 @@ footer {
   cursor: pointer;
   font-size: 1rem;
   text-align: center;
-  text-decoration: none; /* Para enlaces estilizados como botones */
+  text-decoration: none;
   transition: background-color 0.2s ease;
 }
 
 .btn-block {
-  width: 100%; /* Botón que ocupa todo el ancho */
+  width: 100%;
 }
 
 .btn-primary {
-  background-color: #007bff; /* Azul primario */
+  background-color: #007bff;
   color: white;
 }
 .btn-primary:hover {
@@ -229,7 +229,7 @@ footer {
 }
 
 .btn-success {
-  background-color: #28a745; /* Verde éxito */
+  background-color: #28a745;
   color: white;
 }
 .btn-success:hover {
@@ -237,20 +237,20 @@ footer {
 }
 
 .btn-danger {
-  background-color: #dc3545; /* Rojo peligro (para logout) */
+  background-color: #dc3545;
   color: white;
 }
 .btn-danger:hover {
   background-color: #c82333;
 }
 
-.btn-sm { /* Botón pequeño para el header */
+.btn-sm {
   padding: 5px 10px;
   font-size: 0.875rem;
 }
 
 
-/* Área para mostrar mensajes de error/éxito */
+
 .message-area {
   margin-top: 15px;
   padding: 10px;
@@ -260,62 +260,62 @@ footer {
 }
 
 .error-message {
-  color: #721c24; /* Texto oscuro para errores */
-  background-color: #f8d7da; /* Fondo rojo claro */
-  border: 1px solid #f5c6cb; /* Borde rojo */
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
 }
 
 .success-message {
-  color: #155724; /* Texto oscuro para éxito */
-  background-color: #d4edda; /* Fondo verde claro */
-  border: 1px solid #c3e6cb; /* Borde verde */
+  color: #155724;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
 }
 
 
-/* --- ESTILOS PARA EL ESTADO DEL USUARIO EN EL HEADER (index.html) --- */
 
-/* Contenedor en el header para alinear estado y filtros */
+
+
 .header-controls {
   display: flex;
-  flex-wrap: wrap; /* Permite que los elementos bajen si no caben */
-  justify-content: space-between; /* Espacio entre estado de user y filtros */
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  padding: 10px 0; /* Espaciado vertical */
-  gap: 15px; /* Espacio entre elementos si se envuelven */
+  padding: 10px 0;
+  gap: 15px;
 }
 
-/* Contenedor específico del estado del usuario */
+
 #user-status-container {
-  display: flex; /* Alinear elementos internos (bienvenida, botón) */
+  display: flex;
   align-items: center;
-  gap: 10px; /* Espacio entre el saludo y el botón logout, o entre login/register */
+  gap: 10px;
 }
 
-#user-status-container span { /* Estilo para el mensaje "Bienvenido..." */
+#user-status-container span {
   font-weight: bold;
-  color: #444; /* O el color que prefieras */
+  color: #444;
 }
   
-/* Ajustes opcionales para los filtros si es necesario */
+
 .filter-container {
   display: flex;
   gap: 10px;
 }
 
-/* Navegación principal (si la usas en login/register) */
-/* --- Estilos para la barra de navegación --- */
+
+
 .main-nav {
-  background: #21721e; /* Degradado azul */
+  background: #21721e;
   padding: 15px 20px;
-  text-align: center; /* Centrar elementos */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
-  border-radius: 8px; /* Bordes redondeados */
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
   display: flex;
   justify-content: center;
-  gap: 20px; /* Espaciado entre enlaces */
+  gap: 20px;
 }
 
-/* Estilos para los enlaces de la navegación */
+
 .nav-link {
   color: white;
   text-decoration: none;
@@ -328,13 +328,13 @@ footer {
 
 
 
-/* Efecto hover */
+
 .nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.2); /* Fondo sutil */
-  transform: scale(1.05); /* Efecto de agrandamiento */
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
 }
 
-/* Responsive: Ajustar en pantallas pequeñas */
+
 @media (max-width: 768px) {
   .main-nav {
       flex-direction: column;
@@ -343,28 +343,28 @@ footer {
   }
 }
 
-/* --- MEDIA QUERIES (Opcional, para mejorar responsividad) --- */
+
 @media (max-width: 768px) {
   .header-controls {
-      flex-direction: column; /* Apilar controles verticalmente */
-      align-items: stretch; /* Estirar elementos al ancho completo */
+      flex-direction: column;
+      align-items: stretch;
   }
    .filter-container {
-      flex-direction: column; /* Apilar filtros verticalmente */
-       width: 100%; /* Ocupar ancho */
+      flex-direction: column;
+       width: 100%;
   }
    .filter-container input,
    .filter-container select {
-       width: 100%; /* Asegurar que ocupen todo el ancho */
+       width: 100%;
    }
    #user-status-container {
-       justify-content: center; /* Centrar botones/texto de usuario */
-       margin-bottom: 10px; /* Espacio debajo del estado de usuario */
+       justify-content: center;
+       margin-bottom: 10px;
    }
 }
-/* Estilos para el Modal */
+
 .modal {
-  display: none; /* Oculto por defecto */
+  display: none;
   position: fixed;
   z-index: 1000;
   left: 0;
@@ -372,7 +372,7 @@ footer {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0,0,0,0.6); /* Fondo semitransparente */
+  background-color: rgba(0,0,0,0.6);
 }
 
 .modal-content {

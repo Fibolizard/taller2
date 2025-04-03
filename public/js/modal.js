@@ -20,14 +20,14 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    // Delegación de eventos: aseguramos que los elementos dinámicos respondan al evento click
+    
     contenedorProductos.addEventListener('click', (event) => {
         let productElement = event.target.closest('.producto');
-        if (!productElement) return; // Si no hizo clic en un producto, salir
+        if (!productElement) return; 
 
         console.log("Producto clickeado:", productElement);
 
-        // Extraer datos del producto (depende de cómo los renders en HTML)
+        
         const nombre = productElement.querySelector('h3')?.textContent || "Producto sin nombre";
         const imagenSrc = productElement.querySelector('img')?.src || "";
         const descripcion = productElement.querySelector('p')?.textContent || "Sin descripción";
@@ -41,18 +41,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
         modal.style.display = 'block';
 
-        // Evento para añadir al carrito
+        
         addToCartBtn.onclick = () => {
             alert(`Se añadió "${nombre}" al carrito.`);
         };
     });
 
-    // Evento para cerrar el modal
+    
     modalClose.onclick = () => {
         modal.style.display = 'none';
     };
 
-    // Cerrar modal al hacer clic fuera del contenido
+    
     window.onclick = (event) => {
         if (event.target === modal) {
             modal.style.display = 'none';
