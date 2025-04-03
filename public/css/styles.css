@@ -154,24 +154,30 @@ footer {
 
 /* Contenedor principal para formularios de login/registro */
 .auth-container {
-  max-width: 450px; /* Ancho máximo del formulario */
+  max-width: 700px; /* Ancho máximo del formulario */
   margin: 40px auto; /* Centrar horizontalmente y dar espacio vertical */
   padding: 30px;
   background-color: #f8f8f8; /* Un fondo ligero */
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .auth-container h2 {
-  text-align: center;
-  margin-bottom: 25px;
-  color: #333;
+  font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
 }
+
 
 /* Estilos para grupos de formulario (label + input) */
 .form-group {
-  margin-bottom: 20px;
+  display: flex;
+    flex-direction: column;  /* Alinea los elementos verticalmente */
+    align-items: flex-start;  /* Alinea el label a la izquierda */
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .form-group label {
@@ -289,7 +295,7 @@ footer {
   font-weight: bold;
   color: #444; /* O el color que prefieras */
 }
-
+  
 /* Ajustes opcionales para los filtros si es necesario */
 .filter-container {
   display: flex;
@@ -297,25 +303,45 @@ footer {
 }
 
 /* Navegación principal (si la usas en login/register) */
+/* --- Estilos para la barra de navegación --- */
 .main-nav {
-  background-color: #333; /* Fondo oscuro para la barra de nav */
-  padding: 10px 20px;
-  text-align: center; /* Centrar enlaces */
+  background: #21721e; /* Degradado azul */
+  padding: 15px 20px;
+  text-align: center; /* Centrar elementos */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  border-radius: 8px; /* Bordes redondeados */
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espaciado entre enlaces */
 }
 
+/* Estilos para los enlaces de la navegación */
 .nav-link {
   color: white;
   text-decoration: none;
-  padding: 8px 15px;
-  margin: 0 5px;
-  border-radius: 4px;
-  transition: background-color 0.2s ease;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, transform 0.2s ease-in-out;
 }
 
+
+
+/* Efecto hover */
 .nav-link:hover {
-  background-color: #555; /* Resaltar al pasar el mouse */
+  background-color: rgba(255, 255, 255, 0.2); /* Fondo sutil */
+  transform: scale(1.05); /* Efecto de agrandamiento */
 }
 
+/* Responsive: Ajustar en pantallas pequeñas */
+@media (max-width: 768px) {
+  .main-nav {
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px;
+  }
+}
 
 /* --- MEDIA QUERIES (Opcional, para mejorar responsividad) --- */
 @media (max-width: 768px) {
@@ -380,4 +406,31 @@ footer {
   color: #000;
 }
 
+.servicios-container {
+  text-align: center;
+  background-color: #f8f9fa;
+  padding: 40px 20px;
+  margin: 40px auto;
+  border-radius: 10px;
+  max-width: 900px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
+.servicios-container h2 {
+  font-size: 42px;
+  color: #000;
+  font-weight: bold;
+}
+
+.servicios-container h3 {
+  font-size: 28px;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.servicios-container p {
+  font-size: 22px;
+  color: #555;
+  font-family: 'JetBrains Mono', monospace;
+  line-height: 1.6;
+}

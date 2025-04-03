@@ -41,18 +41,18 @@
     },
     {
         "id": 6,
-        "nombre": "CONTROL",
-        "descripcion": "Una mezcla perfecta entre acción y aventura.",
-        "imagen": "producto-e.png",
-        "precio": 45.00,
+        "nombre": "Terraria",
+        "descripcion": "Videojuego de acción, aventura y sandbox en 2D.",
+        "imagen": "producto-g.png",
+        "precio": 15.00,
         "categoria": "Acción"
     },
     {
         "id": 7,
-        "nombre": "CONTROL",
-        "descripcion": "Una mezcla perfecta entre acción y aventura.",
-        "imagen": "producto-e.png",
-        "precio": 45.00,
+        "nombre": "The Binding Of Isaac",
+        "descripcion": "Roguelike de acción y disparos.",
+        "imagen": "producto-h.png",
+        "precio": 12.00,
         "categoria": "Acción"
     }
 ]
